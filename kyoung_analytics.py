@@ -69,7 +69,7 @@ def process_txt_data(folder_name: str, filename: str, results):
         raw_words = file.read().split() # splits text into strings
     words = [] # Empty list to store words without non-word characters
     for word in raw_words:
-        word = re.sub('[,()?.\";!-]', '', word) # removes non-word characters from each word
+        word = requests.sub('[,()?.\";!-]', '', word) # removes non-word characters from each word
         word = word.lower() # converts each word to lowercase
         words.append(word)
         unique_words = set(words) # set to store unique words
