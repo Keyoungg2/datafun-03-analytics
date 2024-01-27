@@ -6,9 +6,8 @@ import csv
 import json
 from pathlib import Path
 import re
-import pip
 from io import StringIO
- import pandas
+import pandas
 
 
 #imports from virtual environment
