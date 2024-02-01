@@ -11,8 +11,7 @@ import pandas as pd
 
 
 #imports from virtual environment
-from pip import requests
-from AppData.Local.Programs.Python.Python312.Lib.test.test_shutil import write_test_file
+#import write_test_file
 
 #import pervious modules
 import Key2Analytic_projsetup
@@ -34,7 +33,7 @@ def write_txt_file(folder_name, filename, data):
 #Text file
 def fetch_and_write_txt_data(folder_name, filename, url):
     try:
-        response: requests.get(url)
+        response= requests.get(url)
         response.raise_for_status() 
         
         if response.status_code == 200:
@@ -231,7 +230,7 @@ def main():
     print(f"{projectname}")
 
  # URLs with differnt data types
-url_text = "https://archive.org/stream/damonpythiasplay00bani/damonpythiasplay00bani_djvu.txt"
+url_text = "https://sherlock-holm.es/stories/plain-text/stud.txt"
 url_excel = "https://github.com/jameskiernan1989/FixtureGenerator/raw/master/testdata.xls"
 url_csv = "https://raw.githubusercontent.com/jasonong/List-of-US-States/master/states.csv"
 url_json = "https://raw.githubusercontent.com/oritzio/football-database/master/USA_NFL.json"
@@ -262,3 +261,5 @@ process_json_data(json_folder_name, json_filename, 'results_json.txt')
 # conditional execution
 if __name__ == "__main__":
     main()
+
+main()
